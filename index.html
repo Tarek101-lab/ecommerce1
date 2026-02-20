@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">MyLogo</div>
+        <div class="welcome">Welcome to Our Site!</div>
+        <div class="right-section">
+            <div class="basket-icon-wrapper">
+                <div class="cart-icon">🛒 <span id="basketCount" class="basket-badge">0</span></div>
+                <div id="basketContainer" class="basket-container"></div>
+            </div>
+            <div id="userInfo" class="user-info" style="display: none;">
+                <span id="userName"></span>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+            <button class="login-btn" id="loginBtnNav">Login</button>
+        </div>
+    </nav>
+
+    <div class="search-sort-container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+        <div class="sort-by">
+            <select id="sortSelect">
+                <option value="name">Sort by Name</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="category">Sort by Category</option>
+            </select>
+        </div>
+    </div>
+
+
+
+    <div class="products-container" id="productsContainer"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
