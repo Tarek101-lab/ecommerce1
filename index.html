@@ -41,8 +41,47 @@
 
 
 
-    <div class="products-container" id="productsContainer"></div>
+    <div class="products-container" id="productsContainer">
+        <!-- Fallback content in case JavaScript fails -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" alt="T-Shirt" class="product-image">
+            <div class="product-header">
+                <div class="product-name">T-Shirt</div>
+                <div class="heart-icon" data-id="1">♥</div>
+            </div>
+            <div class="product-category">Clothing</div>
+            <div class="product-price">$29.99</div>
+            <button class="add-to-basket-btn" data-id="1">Add to Basket</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542272604-787c62d465d1?w=300&h=300&fit=crop" alt="Pants" class="product-image">
+            <div class="product-header">
+                <div class="product-name">Pants</div>
+                <div class="heart-icon" data-id="2">♥</div>
+            </div>
+            <div class="product-category">Clothing</div>
+            <div class="product-price">$59.99</div>
+            <button class="add-to-basket-btn" data-id="2">Add to Basket</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop" alt="Bag" class="product-image">
+            <div class="product-header">
+                <div class="product-name">Bag</div>
+                <div class="heart-icon" data-id="3">♥</div>
+            </div>
+            <div class="product-category">Accessories</div>
+            <div class="product-price">$89.99</div>
+            <button class="add-to-basket-btn" data-id="3">Add to Basket</button>
+        </div>
+    </div>
 
+    <script>
+        // Simple test to see if JavaScript is working
+        console.log('HTML script tag working');
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+        });
+    </script>
     <script src="index.js"></script>
 </body>
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+</head>
+<body>
+    <h1>Debug Test Page</h1>
+    <p>If you can see this, basic HTML is working.</p>
+
+    <div id="test-output"></div>
+
+    <script>
+        const output = document.getElementById('test-output');
+        output.innerHTML = '<p>JavaScript is working!</p>';
+
+        // Test localStorage
+        try {
+            localStorage.setItem('test', 'working');
+            const testValue = localStorage.getItem('test');
+            output.innerHTML += '<p>localStorage is working: ' + testValue + '</p>';
+        } catch (e) {
+            output.innerHTML += '<p>localStorage error: ' + e.message + '</p>';
+        }
+
+        // Test fetch (for images)
+        fetch('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=100&h=100&fit=crop')
+            .then(response => {
+                if (response.ok) {
+                    output.innerHTML += '<p>Image URLs are accessible</p>';
+                } else {
+                    output.innerHTML += '<p>Image URLs might not be accessible</p>';
+                }
+            })
+            .catch(error => {
+                output.innerHTML += '<p>Network error: ' + error.message + '</p>';
+            });
+    </script>
+</body>
+</html>

@@ -79,19 +79,37 @@ project5/
 - `JSON.parse()`: Read data from localStorage
 - `JSON.stringify()`: Save data to localStorage
 
-## Future Enhancements
+## Troubleshooting
 
-- Backend API integration for product database
-- Payment gateway integration
-- Order history tracking
-- Product reviews and ratings
-- Wishlist functionality
-- Admin dashboard
+### If products don't show up:
+1. **Check browser console** (F12 → Console tab) for JavaScript errors
+2. **Make sure all files are uploaded** to GitHub and committed
+3. **Check file paths** - ensure `index.js` and `index.css` are in the same directory as `index.html`
+4. **Clear browser cache** and refresh the page
 
-## License
+### If login doesn't work:
+1. **Check that `login.html` is uploaded** to your GitHub repository
+2. **Verify file paths** are correct
+3. **Open browser console** to see if there are any JavaScript errors
 
-MIT License - Feel free to use this project
+### If cart doesn't show messages:
+1. **Click the cart icon** (🛒) to open the cart dropdown
+2. **Check browser console** for any errors
+3. **Try adding items** to see if the cart updates
 
-## Author
+### Common Issues:
+- **GitHub Pages might take time** to update after pushing changes
+- **File paths are case-sensitive** on GitHub Pages
+- **JavaScript might be blocked** by browser security settings
+- **localStorage might not work** in some browser privacy modes
 
-Created as a modern e-commerce web application example.
+## Quick Test
+
+To test if JavaScript is working, open your browser's developer console (F12) and look for these messages:
+- "HTML script tag working"
+- "JavaScript loaded successfully"
+- "Products array: [9 items]"
+- "Rendering products..."
+- "Initialization complete"
+
+If you don't see these messages, there might be a JavaScript loading issue.

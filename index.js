@@ -1,13 +1,13 @@
 const products = [
-    { id: 1, name: "T-Shirt", price: 29.99, category: "Clothing", image: "photos/shirt.jpg" },
-    { id: 2, name: "Pants", price: 59.99, category: "Clothing", image: "photos/pants.jpg" },
-    { id: 3, name: "Bag", price: 89.99, category: "Accessories", image: "photos/bag.jpg" },
-    { id: 4, name: "Hoodie", price: 79.99, category: "Clothing", image: "photos/hoodie.jpg" },
-    { id: 5, name: "Glasses", price: 149.99, category: "Accessories", image: "photos/glasses.jpg" },
-    { id: 6, name: "Jacket", price: 119.99, category: "Clothing", image: "photos/jacket.jpg" },
-    { id: 7, name: "Cap", price: 24.99, category: "Accessories", image: "photos/cap.jpg" },
-    { id: 8, name: "Water Bottle", price: 34.99, category: "Accessories", image: "photos/water-bottle.jpg" },
-    { id: 9, name: "Shoes", price: 99.99, category: "Footwear", image: "photos/shoes.jpg" }
+    { id: 1, name: "T-Shirt", price: 29.99, category: "Clothing", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" },
+    { id: 2, name: "Pants", price: 59.99, category: "Clothing", image: "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=300&h=300&fit=crop" },
+    { id: 3, name: "Bag", price: 89.99, category: "Accessories", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop" },
+    { id: 4, name: "Hoodie", price: 79.99, category: "Clothing", image: "https://images.unsplash.com/photo-1556821552-7f41c5d440db?w=300&h=300&fit=crop" },
+    { id: 5, name: "Glasses", price: 149.99, category: "Accessories", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop" },
+    { id: 6, name: "Jacket", price: 119.99, category: "Clothing", image: "https://images.unsplash.com/photo-1506370773649-6a0ee6aa1d8e?w=300&h=300&fit=crop" },
+    { id: 7, name: "Cap", price: 24.99, category: "Accessories", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop" },
+    { id: 8, name: "Water Bottle", price: 34.99, category: "Accessories", image: "https://images.unsplash.com/photo-1609947391173-f0379137e076?w=300&h=300&fit=crop" },
+    { id: 9, name: "Shoes", price: 99.99, category: "Footwear", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop" }
 ];
 
 let likes = {};
@@ -60,6 +60,8 @@ function showNotification(message) {
 
 // Render products (using map and forEach)
 function renderProducts() {
+    console.log('Rendering products...');
+    console.log('Filtered products:', filteredProducts);
     productsContainer.innerHTML = '';
     
     // Using map to transform products into DOM elements
@@ -68,7 +70,7 @@ function renderProducts() {
         card.className = 'product-card';
         const isLiked = likes[product.id] ? 'liked' : '';
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="product-image">
+            <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='https://via.placeholder.com/300x250?text=${encodeURIComponent(product.name)}'">
             <div class="product-header">
                 <div class="product-name">${product.name}</div>
                 <div class="heart-icon ${isLiked}" data-id="${product.id}">♥</div>
@@ -84,6 +86,8 @@ function renderProducts() {
     productCards.forEach(card => {
         productsContainer.appendChild(card);
     });
+    
+    console.log('Products rendered, total cards:', productCards.length);
 
     // Add event listeners for heart icons
     document.querySelectorAll('.heart-icon').forEach(heart => {
@@ -131,10 +135,13 @@ function renderProducts() {
 
 // Display basket items
 function renderBasket() {
+    console.log('Rendering basket...');
+    console.log('Basket contents:', basket);
     basketContainer.innerHTML = '';
     
     if (basket.length === 0) {
         basketContainer.innerHTML = '<p class="empty-basket">Your basket is empty</p>';
+        console.log('Basket is empty, showing empty message');
         return;
     }
     
@@ -267,16 +274,21 @@ sortSelect.addEventListener('change', function() {
 });
 
 // Initialize
+console.log('JavaScript loaded successfully');
+console.log('Products array:', products);
 loadBasket();
 checkUserLogin();
 renderProducts();
 renderBasket();
+console.log('Initialization complete');
 
 // Login button functionality
 const loginBtnNav = document.getElementById('loginBtnNav');
 const userInfo = document.getElementById('userInfo');
 const userName = document.getElementById('userName');
 const logoutBtn = document.getElementById('logoutBtn');
+
+console.log('Login button element:', loginBtnNav);
 
 function checkUserLogin() {
     const user = localStorage.getItem('user');
@@ -297,8 +309,11 @@ function checkUserLogin() {
 
 if (loginBtnNav) {
     loginBtnNav.addEventListener('click', function() {
+        console.log('Login button clicked');
         window.location.href = 'login.html';
     });
+} else {
+    console.log('Login button not found!');
 }
 
 if (logoutBtn) {
