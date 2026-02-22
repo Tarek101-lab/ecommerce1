@@ -1,13 +1,13 @@
 const products = [
-    { id: 1, name: "T-Shirt", price: 29.99, category: "Clothing", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" },
-    { id: 2, name: "Pants", price: 59.99, category: "Clothing", image: "https://images.unsplash.com/photo-1542272604-787c62d465d1?w=300&h=300&fit=crop" },
-    { id: 3, name: "Bag", price: 89.99, category: "Accessories", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop" },
-    { id: 4, name: "Hoodie", price: 79.99, category: "Clothing", image: "https://images.unsplash.com/photo-1556821552-7f41c5d440db?w=300&h=300&fit=crop" },
-    { id: 5, name: "Glasses", price: 149.99, category: "Accessories", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop" },
-    { id: 6, name: "Jacket", price: 119.99, category: "Clothing", image: "https://images.unsplash.com/photo-1506370773649-6a0ee6aa1d8e?w=300&h=300&fit=crop" },
-    { id: 7, name: "Cap", price: 24.99, category: "Accessories", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&h=300&fit=crop" },
-    { id: 8, name: "Water Bottle", price: 34.99, category: "Accessories", image: "https://images.unsplash.com/photo-1609947391173-f0379137e076?w=300&h=300&fit=crop" },
-    { id: 9, name: "Shoes", price: 99.99, category: "Footwear", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop" }
+    { id: 1, name: "T-Shirt", price: 29.99, category: "Clothing", image: "photos/shirt.jpg" },
+    { id: 2, name: "Pants", price: 59.99, category: "Clothing", image: "photos/pants.jpg" },
+    { id: 3, name: "Bag", price: 89.99, category: "Accessories", image: "photos/bag.jpg" },
+    { id: 4, name: "Hoodie", price: 79.99, category: "Clothing", image: "photos/hoodie.jpg" },
+    { id: 5, name: "Glasses", price: 149.99, category: "Accessories", image: "photos/glasses.jpg" },
+    { id: 6, name: "Jacket", price: 119.99, category: "Clothing", image: "photos/jacket.jpg" },
+    { id: 7, name: "Cap", price: 24.99, category: "Accessories", image: "photos/cap.jpg" },
+    { id: 8, name: "Water Bottle", price: 34.99, category: "Accessories", image: "photos/water-bottle.jpg" },
+    { id: 9, name: "Shoes", price: 99.99, category: "Footwear", image: "photos/shoes.jpg" }
 ];
 
 let likes = {};
