@@ -38,6 +38,8 @@ project5/
 ├── signup.html         # Sign up page
 ├── signup.css          # Sign up page styling
 ├── signup.js           # Sign up functionality
+├── debug.html          # Diagnostic page for testing
+├── .gitignore          # Git ignore rules
 └── README.md           # This file
 ```
 
@@ -113,3 +115,25 @@ To test if JavaScript is working, open your browser's developer console (F12) an
 - "Initialization complete"
 
 If you don't see these messages, there might be a JavaScript loading issue.
+
+## GitHub Pages Deployment
+
+This project is fully compatible with GitHub Pages. Recent updates ensure proper functionality when deployed:
+
+### Recent Fixes Applied:
+- ✅ **Image URLs**: Updated from local paths (`photos/*.jpg`) to working Unsplash URLs
+- ✅ **Debug Logging**: Added console.log statements throughout JavaScript for troubleshooting
+- ✅ **Fallback Content**: Added basic HTML product cards in case JavaScript fails to load
+- ✅ **Diagnostic Page**: Created `debug.html` to test JavaScript, localStorage, and network connectivity
+
+### Deployment Steps:
+1. Push all files to your GitHub repository
+2. Enable GitHub Pages in repository settings
+3. Visit your GitHub Pages URL
+4. Open browser console (F12) to verify debug messages appear
+5. Test functionality: search, sort, cart, login
+
+### Testing Your Deployment:
+1. Visit `debug.html` on your GitHub Pages site to verify JavaScript works
+2. Check browser console for debug messages like "JavaScript loaded successfully"
+3. If products don't appear, the fallback HTML content will still show basic items

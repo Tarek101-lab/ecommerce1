@@ -15,10 +15,14 @@ let basket = [];
 let filteredProducts = [...products];
 
 const productsContainer = document.getElementById('productsContainer');
-const searchInput = document.getElementById('searchInput');
 const sortSelect = document.getElementById('sortSelect');
 const basketContainer = document.getElementById('basketContainer');
 const basketCount = document.getElementById('basketCount');
+
+const loginBtnNav = document.getElementById('loginBtnNav');
+const userInfo = document.getElementById('userInfo');
+const userName = document.getElementById('userName');
+const logoutBtn = document.getElementById('logoutBtn');
 
 // Load basket from localStorage (JSON handling)
 function loadBasket() {
@@ -239,7 +243,7 @@ if (basketIcon) {
 }
 
 // Search functionality
-searchInput.addEventListener('input', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const searchTerm = this.value.toLowerCase();
     filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(searchTerm) ||
@@ -283,10 +287,7 @@ renderBasket();
 console.log('Initialization complete');
 
 // Login button functionality
-const loginBtnNav = document.getElementById('loginBtnNav');
-const userInfo = document.getElementById('userInfo');
-const userName = document.getElementById('userName');
-const logoutBtn = document.getElementById('logoutBtn');
+
 
 console.log('Login button element:', loginBtnNav);
 
